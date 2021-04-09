@@ -1,0 +1,10 @@
+{% extends 'finance/base.html' %}
+
+{% block title %} Expense List {% endblock %}
+
+{% block content %}
+<form action="#" method="POST"> {% csrf_token %}
+    <h3>Are you sure you want to delete {{ln.name}} ?</h3>
+    <p><input type="submit" , value="Yes" /> <a href="../">Cancel</a></p>
+</form>
+{% endblock %}

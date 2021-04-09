@@ -1,0 +1,14 @@
+{% extends 'finance/base.html' %}
+
+{% block title %} Expense List {% endblock %}
+
+{% block content %}
+<h1 class="text-center mb-5">Expense List</h1>
+{% for ln in lists %}
+<div class="d-flex justify-content-center">
+    <div class="card" style="width: 18rem;">
+        <a href="{{ ln.name }}" class="list-group-item">{{ ln.name }}</a>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}

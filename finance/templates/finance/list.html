@@ -1,0 +1,32 @@
+{% extends 'finance/base.html' %}
+
+{% block title %} View Expense ({{expense_list.name}}){% endblock %}
+
+{% block content %}
+<h1>{{ expense_list.name }}</h1>
+<a class="btn btn-danger" aria-current="page" href="delete">Delete List</a>
+
+<form method="POST" action="#">
+    {% csrf_token %}
+    <table class="table mt-5">
+        <thead>
+            <tr>
+                <th scope="col">Expense</th>
+                <th scope="col">Cost</th>
+            </tr>
+        </thead>
+
+        {% for expense in expense_list.expense_set.all %}
+        <tr>
+            <th>{{ expense.title }}</th>
+            <th>${{ expense.cost }}</th>
+        </tr>
+        {% endfor %}
+    </table>
+    <div class="input-group mb-3 mt-5">
+        <input class="form-control" , type="text" , name="newExpense" , placeholder="Name">
+        <input class="form-control" , type="number" , name="newCost" , placeholder="Cost">
+    </div>
+    <button class="btn btn-dark" , type="submit" , name="new" , value="new">Add Expense</button>
+</form>
+{% endblock %}

@@ -1,0 +1,129 @@
+{% extends 'finance/base.html' %}
+
+{% block content %}
+{% load static %}
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="hero d-flex align-items-center">
+
+    <div class="container mb-5">
+        <div class="row">
+            <div class="col-lg-6 d-flex flex-column justify-content-center">
+                <h1 data-aos="fade-up">Keep Track of your Expenses</h1>
+                <h2 data-aos="fade-up" data-aos-delay="400">This Expense Managment Application helps you
+                    keep track of your expenses and manage them in a better way</h2>
+                <div data-aos="fade-up" data-aos-delay="600">
+                    <div class="text-center text-lg-start">
+                        <a href="/login"
+                            class="d-inline-flex align-items-center justify-content-center align-self-center">
+                            <button class="btn btn-info">Get Started</button>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
+                <img src="{% static '/img/hero-img.png' %}" class="img-fluid" alt="My image">
+            </div>
+        </div>
+    </div>
+
+</section><!-- End Hero -->
+
+<!-- ======= Features Section ======= -->
+<section id="features" class="features">
+
+    <div class="container mt-5" data-aos="fade-up">
+
+        <div class="mb-5">
+            <header class="section-header text-center mb-5">
+                <h2>Features</h2>
+                <p>Create, Read, Update, Delete (CRUD) expenses</p>
+            </header>
+
+            <div class="container">
+                <img src="{% static '/img/feature.png' %}" class="img-fluid" alt="My image">
+            </div>
+        </div>
+
+    </div> <!-- / row -->
+
+    <!-- Feature Icons -->
+    <div class="row feature-icons mt-5 mb-5" data-aos="fade-up">
+        <h3>Full-Stack Development</h3>
+
+        <div class="row">
+
+            <div class="col-xl-4 text-center" data-aos="fade-right" data-aos-delay="100">
+                <img src="{% static '/img/values-2.png' %}" class="img-fluid" alt="My image">
+            </div>
+
+            <div class="col-xl-8 d-flex content">
+                <div class="row align-self-center gy-4">
+
+                    <div class="col-md-6 icon-box" data-aos="fade-up">
+                        <i class="ri-line-chart-line"></i>
+                        <div>
+                            <h4>Django</h4>
+                            <p>Used python web framework 'Django' as the stack to develop the complete site
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+                        <i class="ri-stack-line"></i>
+                        <div>
+                            <h4>HTML & CSS</h4>
+                            <p>Used HTML and CSS for styling and templates
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+                        <i class="ri-brush-4-line"></i>
+                        <div>
+                            <h4>Postgresql</h4>
+                            <p>Used Sqlite3 in development phase but switched to Postgresql later on</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+                        <i class="ri-magic-line"></i>
+                        <div>
+                            <h4>Bootstrap 5</h4>
+                            <p>Used bootstrap 5 for additional styling</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer" class="footer mt-5">
+
+        <div class="footer-newsletter">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-12 text-center">
+                        <h4>Our Newsletter</h4>
+                    </div>
+                    <div class="col-lg-6 text-center">
+                        <form action="" method="post">
+                            <input class="form-control" type="email" name="email">
+                            <button class="btn btn-dark" , type="submit">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container text-center mt-5">
+            <div class="copyright">
+                &copy; Copyright <strong><span>ExpenseManager</span></strong>. Developed by Hishaam
+                Armghan
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+
+    {% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'finance/base.html' %}
+
+{% block title %} Login {% endblock %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<h1>Login</h1>
+<form method="POST" class="form-group mt-5">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <p>Don't have an account? create one <a href="../register">here</a></p>
+    <button type="submit" class="btn btn-success">Login</button>
+</form>
+{% endblock %}
